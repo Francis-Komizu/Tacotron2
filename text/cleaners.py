@@ -13,9 +13,11 @@ hyperparameter. Some cleaners are English-specific. You'll typically want to use
 '''
 
 import re
+import json
 from unidecode import unidecode
 from .numbers import normalize_numbers
-
+import pyopenjtalk
+from janome.tokenizer import Tokenizer
 
 # Regular expression matching whitespace:
 _whitespace_re = re.compile(r'\s+')
@@ -43,7 +45,7 @@ _abbreviations = [(re.compile('\\b%s\\.' % x[0], re.IGNORECASE), x[1]) for x in 
 ]]
 
 # pinyin-to-katakana map
-map_path = './py2kn.json'
+map_path = './text/py2kn.json'
 with open(map_path, 'r', encoding='utf-8') as f:
   py2kn_map = json.load(f)
 
