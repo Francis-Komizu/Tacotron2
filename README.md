@@ -1,4 +1,4 @@
-# Gal-TTS based on Tacotron2 and Waveglow
+# Stella-TTS based on Tacotron2 and Waveglow
 
 ## Dataset:
 ### SenRenSpeech
